@@ -28,17 +28,17 @@ module mux_4x1(a,sel,y);
 
 input [3:0] a;
 input [1:0] sel;
-output y;
-reg y;
+output reg y;
+
 parameter A0 = 2'b00, A1 = 2'b01, A2 = 2'b10, A3 = 2'b11;
 
-always@(sel)	begin
+always@(*)	begin
 			case(sel)
 				
-			A0: assign y = a[0];
-			A1: assign y = a[1];
-			A2: assign y = a[2];
-			A3: assign y = a[3];
+			A0: y = a[0];
+			A1: y = a[1];
+			A2: y = a[2];
+			A3: y = a[3];
 			
 			endcase
 		end

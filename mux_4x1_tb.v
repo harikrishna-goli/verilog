@@ -47,4 +47,8 @@ initial begin
 	end
 	
 end
+initial #200 $finish;
 endmodule
+
+
+
